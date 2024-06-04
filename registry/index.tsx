@@ -1,4 +1,6 @@
 import { Registry } from "@/registry/schema";
+import { compact } from "@headlessui/react/dist/utils/render";
+import { Component } from "lucide-react";
 import * as React from "react";
 
 const ui: Registry = {
@@ -216,6 +218,11 @@ const ui: Registry = {
     name: "shiny-button",
     type: "components:ui",
     files: ["registry/components/magicui/shiny-button.tsx"],
+  },
+  "pulsating-button": {
+    name: "pulsating-button",
+    type: "components:ui",
+    files: ["registry/components/magicui/pulsating-button.tsx"]
   },
   "box-reveal": {
     name: "box-reveal",
@@ -773,6 +780,15 @@ const example: Registry = {
     files: ["registry/components/example/shiny-button-demo.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/shiny-button-demo"),
+    ),
+  },
+  "pulsating-button-demo": {
+    name: "pulsating-button-demo",
+    type: "components:example",
+    files: ["registry/components/example/pulsating-button-demo.tsx"],
+    component: React.lazy(
+      () =>
+        import("@/registry/components/example/pulsating-button-demo"),
     ),
   },
   "box-reveal-demo": {
