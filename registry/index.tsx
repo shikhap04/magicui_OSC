@@ -219,11 +219,6 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/magicui/shiny-button.tsx"],
   },
-  "pulsating-button": {
-    name: "pulsating-button",
-    type: "components:ui",
-    files: ["registry/components/magicui/pulsating-button.tsx"],
-  },
   "box-reveal": {
     name: "box-reveal",
     type: "components:ui",
@@ -238,6 +233,11 @@ const ui: Registry = {
     name: "gauge-circle",
     type: "components:ui",
     files: ["registry/components/magicui/gauge-circle.tsx"],
+  },
+  "pulsating-button": {
+    name: "pulsating-button",
+    type: "components:ui",
+    files: ["registry/components/magicui/pulsating-button.tsx"],
   },
 };
 
@@ -782,15 +782,6 @@ const example: Registry = {
       () => import("@/registry/components/example/shiny-button-demo"),
     ),
   },
-  "pulsating-button-demo": {
-    name: "pulsating-button-demo",
-    type: "components:example",
-    files: ["registry/components/example/pulsating-button-demo.tsx"],
-    component: React.lazy(
-      () =>
-        import("@/registry/components/example/pulsating-button-demo"),
-    ),
-  },
   "box-reveal-demo": {
     name: "box-reveal-demo",
     type: "components:example",
@@ -821,6 +812,14 @@ const example: Registry = {
     files: ["registry/components/example/shine-border-demo-2.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/shine-border-demo-2"),
+    ),
+  },
+  "pulsating-button-demo": {
+    name: "pulsating-button-demo",
+    type: "components:example",
+    files: ["registry/components/example/pulsating-button-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/pulsating-button-demo"),
     ),
   },
 };
