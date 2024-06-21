@@ -184,6 +184,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/magicui/letter-pullup.tsx"],
   },
+  "sparkles-text": {
+    name: "sparkles-text",
+    type: "components:ui",
+    files: ["registry/components/magicui/sparkles-text.tsx"],
+  },
   "flip-text": {
     name: "flip-text",
     type: "components:ui",
@@ -193,6 +198,11 @@ const ui: Registry = {
     name: "icon-cloud",
     type: "components:ui",
     files: ["registry/components/magicui/icon-cloud.tsx"],
+  },
+  "wavy-dot-pattern": {
+    name: "wavy-dot-pattern",
+    type: "components:ui",
+    files: ["registry/components/magicui/wavy-dot-pattern.tsx"],
   },
   "gradual-spacing": {
     name: "gradual-spacing",
@@ -742,12 +752,28 @@ const example: Registry = {
       () => import("@/registry/components/example/flip-text-demo"),
     ),
   },
+  "sparkles-text-demo": {
+    name: "sparkles-text-demo",
+    type: "components:example",
+    files: ["registry/components/example/sparkles-text-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/sparkles-text-demo"),
+    ),
+  },
   "icon-cloud-demo": {
     name: "icon-cloud-demo",
     type: "components:example",
     files: ["registry/components/example/icon-cloud-demo.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/icon-cloud-demo"),
+    ),
+  },
+  "wavy-dot-pattern-demo": {
+    name: "wavy-dot-pattern-demo",
+    type: "components:example",
+    files: ["registry/components/example/wavy-dot-pattern-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/wavy-dot-pattern-demo"),
     ),
   },
   "gradual-spacing-demo": {
