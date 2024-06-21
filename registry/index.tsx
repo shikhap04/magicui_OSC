@@ -1,4 +1,6 @@
 import { Registry } from "@/registry/schema";
+import { compact } from "@headlessui/react/dist/utils/render";
+import { Component } from "lucide-react";
 import * as React from "react";
 
 const ui: Registry = {
@@ -242,20 +244,10 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/magicui/gauge-circle.tsx"],
   },
-  confetti: {
-    name: "confetti",
+  "pulsating-button": {
+    name: "pulsating-button",
     type: "components:ui",
-    files: ["registry/components/magicui/confetti.tsx"],
-  },
-  "animated-subscribe-button": {
-    name: "animated-subscribe-button",
-    type: "components:ui",
-    files: ["registry/components/magicui/animated-subscribe-button.tsx"],
-  },
-  "cool-mode": {
-    name: "cool-mode",
-    type: "components:ui",
-    files: ["registry/components/magicui/cool-mode.tsx"],
+    files: ["registry/components/magicui/pulsating-button.tsx"],
   },
 };
 
@@ -848,93 +840,12 @@ const example: Registry = {
       () => import("@/registry/components/example/shine-border-demo-2"),
     ),
   },
-  "confetti-hover": {
-    name: "confetti-hover",
+  "pulsating-button-demo": {
+    name: "pulsating-button-demo",
     type: "components:example",
-    files: ["registry/components/example/confetti-hover.tsx"],
+    files: ["registry/components/example/pulsating-button-demo.tsx"],
     component: React.lazy(
-      () => import("@/registry/components/example/confetti-hover"),
-    ),
-  },
-  "confetti-basic-cannon": {
-    name: "confetti-basic-cannon",
-    type: "components:example",
-    files: ["registry/components/example/confetti-basic-cannon.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/confetti-basic-cannon"),
-    ),
-  },
-  "confetti-random-direction": {
-    name: "confetti-random-direction",
-    type: "components:example",
-    files: ["registry/components/example/confetti-random-direction.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/confetti-random-direction"),
-    ),
-  },
-  "confetti-fireworks": {
-    name: "confetti-fireworks",
-    type: "components:example",
-    files: ["registry/components/example/confetti-fireworks.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/confetti-fireworks"),
-    ),
-  },
-  "confetti-stars": {
-    name: "confetti-stars",
-    type: "components:example",
-    files: ["registry/components/example/confetti-stars.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/confetti-stars"),
-    ),
-  },
-  "confetti-side-cannons": {
-    name: "confetti-side-cannons",
-    type: "components:example",
-    files: ["registry/components/example/confetti-side-cannons.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/confetti-side-cannons"),
-    ),
-  },
-  "confetti-custom-shapes": {
-    name: "confetti-custom-shapes",
-    type: "components:example",
-    files: ["registry/components/example/confetti-custom-shapes.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/confetti-custom-shapes"),
-    ),
-  },
-  "confetti-emoji": {
-    name: "confetti-emoji",
-    type: "components:example",
-    files: ["registry/components/example/confetti-emoji.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/confetti-emoji"),
-    ),
-  },
-  "animated-subscribe-button-demo": {
-    name: "animated-subscribe-button-demo",
-    type: "components:example",
-    files: ["registry/components/example/animated-subscribe-button-demo.tsx"],
-    component: React.lazy(
-      () =>
-        import("@/registry/components/example/animated-subscribe-button-demo"),
-    ),
-  },
-  "cool-mode-demo": {
-    name: "cool-mode-demo",
-    type: "components:example",
-    files: ["registry/components/example/cool-mode-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/cool-mode-demo"),
-    ),
-  },
-  "cool-mode-custom": {
-    name: "cool-mode-custom",
-    type: "components:example",
-    files: ["registry/components/example/cool-mode-custom.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/cool-mode-custom"),
+      () => import("@/registry/components/example/pulsating-button-demo"),
     ),
   },
 };
