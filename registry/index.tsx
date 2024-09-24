@@ -954,6 +954,14 @@ const example: Registry = {
       () => import("@/registry/components/example/pulsating-button-demo"),
     ),
   },
+  "pulsating-button-demo": {
+    name: "pulsating-button-demo",
+    type: "components:example",
+    files: ["registry/components/example/pulsating-button-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/pulsating-button-demo"),
+    ),
+  },
   "file-tree-demo": {
     name: "file-tree-demo",
     type: "components:example",
