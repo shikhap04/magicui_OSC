@@ -14,7 +14,12 @@ export const docsConfig: DocsConfig = {
     {
       title: "Templates",
       href: "https://pro.magicui.design",
-      external: true,
+      event: "header_cta_clicked",
+      label: "New",
+    },
+    {
+      title: "Showcase",
+      href: "/showcase",
     },
   ],
   sidebarNav: [
@@ -47,11 +52,64 @@ export const docsConfig: DocsConfig = {
             },
           ],
         },
+        {
+          title: "CLI",
+          href: "/docs/cli",
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Templates",
+      items: [
+        {
+          title: "Portfolio",
+          href: `/docs/templates/portfolio`,
+          items: [],
+          label: "",
+          event: "template_portfolio_clicked",
+        },
+        {
+          title: "Startup",
+          href: `/docs/templates/startup`,
+          items: [],
+          label: "",
+          paid: true,
+          event: "template_startup_clicked",
+        },
+        {
+          title: "SaaS",
+          href: `/docs/templates/saas`,
+          items: [],
+          label: "New",
+          paid: true,
+          event: "template_saas_clicked",
+        },
+        {
+          title: "Mobile App",
+          href: `/docs/templates/app`,
+          items: [],
+          disabled: true,
+          label: "Coming soon",
+          paid: true,
+          event: "template_app_clicked",
+        },
       ],
     },
     {
       title: "Components",
       items: [
+        {
+          title: "Marquee",
+          href: `/docs/components/marquee`,
+          items: [],
+        },
+        {
+          title: "Hero Video Dialog",
+          href: `/docs/components/hero-video-dialog`,
+          items: [],
+          label: "",
+        },
         {
           title: "Bento Grid",
           href: `/docs/components/bento-grid`,
@@ -63,18 +121,19 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Tweet Card",
-          href: `/docs/components/tweet-card`,
+          title: "Dock",
+          href: `/docs/components/dock`,
           items: [],
-        },
-        {
-          title: "Marquee",
-          href: `/docs/components/marquee`,
-          items: [],
+          label: "",
         },
         {
           title: "Globe",
           href: `/docs/components/globe`,
+          items: [],
+        },
+        {
+          title: "Tweet Card",
+          href: `/docs/components/tweet-card`,
           items: [],
         },
         {
@@ -83,12 +142,7 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "",
         },
-        {
-          title: "Dock",
-          href: `/docs/components/dock`,
-          items: [],
-          label: "",
-        },
+
         {
           title: "Avatar Circles",
           href: `/docs/components/avatar-circles`,
@@ -102,8 +156,31 @@ export const docsConfig: DocsConfig = {
           label: "",
         },
         {
-          title: "Gauge Circle",
-          href: `/docs/components/gauge-circle`,
+          title: "Animated Circular Progress Bar",
+          href: `/docs/components/animated-circular-progress-bar`,
+          items: [],
+          label: "",
+        },
+        {
+          title: "File Tree",
+          href: `/docs/components/file-tree`,
+          items: [],
+          label: "",
+        },
+      ],
+    },
+    {
+      title: "Device Mocks",
+      items: [
+        {
+          title: "Safari",
+          href: `/docs/components/safari`,
+          items: [],
+          label: "",
+        },
+        {
+          title: "iPhone 15 Pro",
+          href: `/docs/components/iphone-15-pro`,
           items: [],
           label: "",
         },
@@ -117,11 +194,6 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/animated-beam`,
           items: [],
         },
-        // {
-        //   title: "Animated Lines",
-        //   href: `/docs/components/animated-lines`,
-        //   items: [],
-        // },
         {
           title: "Border Beam",
           href: `/docs/components/border-beam`,
@@ -153,13 +225,30 @@ export const docsConfig: DocsConfig = {
           title: "Confetti",
           href: `/docs/components/confetti`,
           items: [],
-          label: "New",
+          label: "",
         },
         {
           title: "Particles",
           href: `/docs/components/particles`,
           items: [],
-          label: "New",
+          label: "",
+        },
+        {
+          title: "Cool Mode",
+          href: `/docs/components/cool-mode`,
+          items: [],
+          label: "",
+        },
+      ],
+    },
+    {
+      title: "Animations",
+      items: [
+        {
+          title: "Blur Fade",
+          href: `/docs/components/blur-fade`,
+          items: [],
+          label: "",
         },
       ],
     },
@@ -189,6 +278,12 @@ export const docsConfig: DocsConfig = {
           label: "",
         },
         {
+          title: "Hyper Text",
+          href: `/docs/components/hyper-text`,
+          items: [],
+          label: "",
+        },
+        {
           title: "Word Rotate",
           href: `/docs/components/word-rotate`,
           items: [],
@@ -201,20 +296,8 @@ export const docsConfig: DocsConfig = {
           label: "",
         },
         {
-          title: "Wavy Text",
-          href: `/docs/components/wavy-text`,
-          items: [],
-          label: "",
-        },
-        {
           title: "Blur In",
           href: `/docs/components/blur-in`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Separate Away",
-          href: `/docs/components/separate-away`,
           items: [],
           label: "",
         },
@@ -270,19 +353,19 @@ export const docsConfig: DocsConfig = {
           title: "Sparkles Text",
           href: `/docs/components/sparkles-text`,
           items: [],
-          label: "New",
-        },
-        {
-          title: "Cool Mode",
-          href: `/docs/components/cool-mode`,
-          items: [],
-          label: "New",
+          label: "",
         },
       ],
     },
     {
       title: "Buttons",
       items: [
+        {
+          title: "Rainbow Button",
+          href: `/docs/components/rainbow-button`,
+          items: [],
+          label: "New",
+        },
         {
           title: "Shimmer Button",
           href: `/docs/components/shimmer-button`,
@@ -298,7 +381,13 @@ export const docsConfig: DocsConfig = {
           title: "Animated Subscribe Button",
           href: `/docs/components/animated-subscribe-button`,
           items: [],
-          label: "New",
+          label: "",
+        },
+        {
+          title: "Pulsating Button",
+          href: "/docs/components/pulsating-button",
+          items: [],
+          label: "",
         },
         {
           title: "Pulsating Button",
@@ -311,6 +400,12 @@ export const docsConfig: DocsConfig = {
     {
       title: "Backgrounds",
       items: [
+        {
+          title: "Flickering Grid",
+          href: `/docs/components/flickering-grid`,
+          items: [],
+          label: "",
+        },
         {
           title: "Animated Grid Pattern",
           href: `/docs/components/animated-grid-pattern`,
@@ -336,22 +431,6 @@ export const docsConfig: DocsConfig = {
           title: "Grid Pattern",
           href: `/docs/components/grid-pattern`,
           items: [],
-        },
-        {
-          title: "Linear Gradient",
-          href: `/docs/components/linear-gradient`,
-          items: [],
-        },
-        {
-          title: "Radial Gradient",
-          href: `/docs/components/radial-gradient`,
-          items: [],
-        },
-        {
-          title: "Wavy Dot Pattern",
-          href: `/docs/components/wavy-dot-pattern`,
-          items: [],
-          label: "New",
         },
       ],
     },

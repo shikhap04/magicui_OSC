@@ -1,5 +1,7 @@
 "use client";
+
 import { motion } from "framer-motion";
+
 import { cn } from "@/lib/utils";
 
 interface BlurIntProps {
@@ -25,8 +27,8 @@ const BlurIn = ({ word, className, variant, duration = 1 }: BlurIntProps) => {
       transition={{ duration }}
       variants={combinedVariants}
       className={cn(
-        className,
         "font-display text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]",
+        className,
       )}
     >
       {word}

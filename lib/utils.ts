@@ -1,14 +1,20 @@
+import { Metadata } from "next";
 import { env } from "@/env.mjs";
 import clsx, { ClassValue } from "clsx";
-import { Metadata } from "next";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function hasApplePay() {
-  return typeof window !== "undefined" && window.ApplePaySession;
+export function humanize(name: string): string {
+  return name
+    .replace(/-/g, " ")
+    .replace(/([A-Z])/g, " $1")
+    .trim()
+    .split(/\s+/)
+    .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
+    .join(" ");
 }
 
 export const truncate = (str: string | null, length: number) => {
@@ -51,7 +57,7 @@ export function absoluteUrl(path: string) {
 export function constructMetadata({
   title = "Magic UI - Modern React + Tailwind CSS components & Templates",
   description = "Magic UI is a curated collection of the best landing page components built using React + Tailwind CSS + Framer Motion",
-  image = absoluteUrl("/api/og"),
+  image = absoluteUrl("/og"),
   ...props
 }: {
   title?: string;
@@ -99,10 +105,6 @@ export function constructMetadata({
       },
     ],
     creator: "dillionverma",
-    // themeColor: [
-    //   { media: "(prefers-color-scheme: light)", color: "white" },
-    //   { media: "(prefers-color-scheme: dark)", color: "black" },
-    // ],
     ...props,
   };
 }

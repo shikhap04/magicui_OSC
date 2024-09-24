@@ -1,9 +1,9 @@
+import { cn } from "@/lib/utils";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
 
 type TechComponentType = {
   name: string;
@@ -21,6 +21,7 @@ const techComponents: TechComponents = {
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         className="size-8"
+        aria-label="Next.js"
         fill="currentColor"
       >
         <title>Next.js</title>
@@ -35,6 +36,7 @@ const techComponents: TechComponents = {
         role="img"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
+        aria-label="React"
         className="size-8"
         fill="currentColor"
       >
@@ -49,6 +51,7 @@ const techComponents: TechComponents = {
       <svg
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
+        aria-label="Typescript"
         className="size-8"
         fill="currentColor"
       >
@@ -64,6 +67,7 @@ const techComponents: TechComponents = {
         role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
+        aria-label="Tailwind css"
         className="size-8"
         fill="currentColor"
       >
@@ -79,6 +83,7 @@ const techComponents: TechComponents = {
         role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
+        aria-label="Framer Motion"
         className="size-8"
         fill="none"
         stroke="currentColor"
@@ -98,6 +103,7 @@ const techComponents: TechComponents = {
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
+        aria-label="shadcn"
         viewBox="0 0 256 256"
         className="size-8"
         fill="none"
@@ -139,7 +145,7 @@ export default function TechStack({
   className?: string;
 }) {
   return (
-    <div className={cn("not-prose flex flex-row gap-2", className)}>
+    <div className={cn("flex flex-row gap-2", className)}>
       {technologies.map((tech) => (
         <Tooltip key={tech}>
           <TooltipTrigger>{techComponents[tech].icon}</TooltipTrigger>

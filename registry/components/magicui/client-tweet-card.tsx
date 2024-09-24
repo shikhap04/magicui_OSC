@@ -1,11 +1,12 @@
 "use client";
 
+import { TweetProps, useTweet } from "react-tweet";
+
 import {
   MagicTweet,
   TweetNotFound,
   TweetSkeleton,
-} from "@/registry/components/magicui/tweet-card";
-import { TweetProps, useTweet } from "react-tweet";
+} from "@/components/magicui/tweet-card";
 
 const ClientTweetCard = ({
   id,

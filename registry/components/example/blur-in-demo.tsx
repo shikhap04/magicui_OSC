@@ -1,4 +1,5 @@
-import BlurIn from "../magicui/blur-in";
+import BlurIn from "@/components/magicui/blur-in";
+
 const BlurInDemo = () => {
   return (
     <BlurIn

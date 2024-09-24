@@ -1,11 +1,14 @@
-import { Mdx } from "@/components/mdx-components";
-import { siteConfig } from "@/config/site";
 import { env } from "@/env.mjs";
+
+import { siteConfig } from "@/config/site";
 import { absoluteUrl } from "@/lib/utils";
+import { Mdx } from "@/components/mdx-components";
+
 import "@/styles/mdx.css";
-import { allPages } from "contentlayer/generated";
+
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { allPages } from "contentlayer/generated";
 
 interface PageProps {
   params: {
@@ -35,7 +38,7 @@ export async function generateMetadata({
 
   const url = env.NEXT_PUBLIC_APP_URL;
 
-  const ogUrl = new URL(`${url}/api/og`);
+  const ogUrl = new URL(`${url}/og`);
   ogUrl.searchParams.set("heading", page.title);
   ogUrl.searchParams.set("type", siteConfig.name);
   ogUrl.searchParams.set("mode", "light");

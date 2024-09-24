@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CoolMode } from "@/registry/components/magicui/cool-mode";
-import React from "react";
+import { CoolMode } from "@/components/magicui/cool-mode";
 
 export default function CoolModeCustom() {
   return (

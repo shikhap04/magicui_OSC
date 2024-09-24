@@ -1,6 +1,7 @@
-import { cn } from "@/lib/utils";
-import AnimatedShinyText from "@/registry/components/magicui/animated-shiny-text";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
+
+import { cn } from "@/lib/utils";
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 
 export default async function AnimatedShinyTextDemo() {
   return (

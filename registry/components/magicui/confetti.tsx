@@ -1,5 +1,3 @@
-import { Button, ButtonProps } from "@/components/ui/button";
-import confetti from "canvas-confetti";
 import type { ReactNode } from "react";
 import React, {
   createContext,
@@ -10,13 +8,14 @@ import React, {
   useMemo,
   useRef,
 } from "react";
-
 import type {
   GlobalOptions as ConfettiGlobalOptions,
+  CreateTypes as ConfettiInstance,
   Options as ConfettiOptions,
 } from "canvas-confetti";
+import confetti from "canvas-confetti";
 
-import type { CreateTypes as ConfettiInstance } from "canvas-confetti";
+import { Button, ButtonProps } from "@/components/ui/button";
 
 type Api = {
   fire: (options?: ConfettiOptions) => void;
@@ -120,6 +119,8 @@ function ConfettiButton({ options, children, ...props }: ConfettiButtonProps) {
     </Button>
   );
 }
+
+Confetti.displayName = "Confetti";
 
 export { Confetti, ConfettiButton };
 
